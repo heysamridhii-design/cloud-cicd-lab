@@ -3,14 +3,11 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-    res.send("Cloud Application Development Lab");
+    res.send("Automated Build Application");
 });
 
-app.get("/health", (req, res) => {
-    res.json({
-        status: "Application is running",
-        success: true
-    });
+app.get("/status", (req, res) => {
+    res.send("Build pipeline is working successfully!");
 });
 
 const PORT = process.env.PORT || 3000;
